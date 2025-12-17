@@ -133,6 +133,91 @@ public class NotificationsController : ControllerBase
         return Ok(MapToResponse(notification));
     }
 
+    // Endpointy dla workerów (zewnętrznych dostawców)
+    
+    [HttpGet("ready/{channel}")]
+    public async Task<ActionResult<IEnumerable<NotificationResponse>>> GetReadyToSend(string channel)
+    {
+        if (!Enum.TryParse<NotificationChannel>(channel, true, out var notificationChannel))
+        {
+            return BadRequest($"Invalid channel. Allowed values: {string.Join(", ", Enum.GetNames<NotificationChannel>())}");
+        }
+
+        var notifications = await _repository.GetReadyToSendAsync(DateTime.UtcNow);
+        var filtered = notifications
+            .Where(n => n.Channel == notificationChannel)
+            .Select(MapToResponse);
+        
+        return Ok(filtered);
+    }
+
+    [HttpPut("{id:guid}/status")]
+    public async Task<ActionResult<NotificationResponse>> UpdateStatus(Guid id, [FromBody] UpdateStatusRequest request)
+    {
+        var notification = await _repository.GetByIdAsync(id);
+        
+        if (notification == null)
+        {
+            return NotFound();
+        }
+
+        if (!Enum.TryParse<NotificationStatus>(request.Status, true, out var status))
+        {
+            return BadRequest($"Invalid status. Allowed values: {string.Join(", ", Enum.GetNames<NotificationStatus>())}");
+        }
+
+        // Walidacja przejść między stanami
+        if (!IsValidStatusTransition(notification.Status, status))
+        {
+            return BadRequest($"Invalid status transition from {notification.Status} to {status}");
+        }
+
+        notification.Status = status;
+        
+        if (request.SentAt.HasValue)
+        {
+            notification.SentAt = request.SentAt.Value;
+        }
+        
+        if (request.LastError != null)
+        {
+            notification.LastError = request.LastError;
+        }
+        
+        if (request.RetryCount.HasValue)
+        {
+            notification.RetryCount = request.RetryCount.Value;
+        }
+
+        await _repository.UpdateAsync(notification);
+
+        return Ok(MapToResponse(notification));
+    }
+
+    private static bool IsValidStatusTransition(NotificationStatus currentStatus, NotificationStatus newStatus)
+    {
+        // Dozwolone przejścia:
+        // Pending/Scheduled -> Sending (worker zaczyna przetwarzanie)
+        // Pending/Scheduled -> Cancelled (użytkownik anuluje)
+        // Sending -> Sent (sukces)
+        // Sending -> Failed (po wyczerpaniu prób)
+        // Sending -> Scheduled (retry - powrót do kolejki)
+        // Failed -> Scheduled (ponowna próba przez użytkownika)
+        
+        return (currentStatus, newStatus) switch
+        {
+            (NotificationStatus.Pending, NotificationStatus.Scheduled) => true,
+            (NotificationStatus.Pending, NotificationStatus.Cancelled) => true,
+            (NotificationStatus.Scheduled, NotificationStatus.Sending) => true,
+            (NotificationStatus.Scheduled, NotificationStatus.Cancelled) => true,
+            (NotificationStatus.Sending, NotificationStatus.Sent) => true,
+            (NotificationStatus.Sending, NotificationStatus.Failed) => true,
+            (NotificationStatus.Sending, NotificationStatus.Scheduled) => true, // retry
+            (NotificationStatus.Failed, NotificationStatus.Scheduled) => true, // ponowna próba
+            _ => false
+        };
+    }
+
     private static NotificationResponse MapToResponse(Notification notification)
     {
         return new NotificationResponse

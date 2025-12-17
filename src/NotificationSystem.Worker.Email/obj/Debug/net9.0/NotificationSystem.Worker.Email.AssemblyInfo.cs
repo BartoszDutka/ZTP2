@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotificationSystem.Worker.Email")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9c050fc2d4f3d5a5921ca10532dab69fde090d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2021ff78b7a083700a85d220eb5b24b1c4cf014f")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotificationSystem.Worker.Email")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotificationSystem.Worker.Email")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

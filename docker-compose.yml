@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: src/NotificationSystem.Api/Dockerfile
     ports:
-      - "5173:80"
+      - "5173:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - MongoDbSettings__ConnectionString=mongodb+srv://user:RGB3manas@cluster0.ccrfrrt.mongodb.net/?appName=Cluster0
@@ -15,11 +15,11 @@ services:
     build:
       context: .
       dockerfile: src/NotificationSystem.Worker.Email/Dockerfile
+    ports:
+      - "5001:8080"
     environment:
       - DOTNET_ENVIRONMENT=Production
-      - MongoDbSettings__ConnectionString=mongodb+srv://user:RGB3manas@cluster0.ccrfrrt.mongodb.net/?appName=Cluster0
-      - MongoDbSettings__DatabaseName=ZtpLab1DevDb
-      - MongoDbSettings__CollectionName=Notifications
+      - ApiUrl=http://api:8080
     depends_on:
       - api
 
@@ -27,10 +27,10 @@ services:
     build:
       context: .
       dockerfile: src/NotificationSystem.Worker.Push/Dockerfile
+    ports:
+      - "5002:8080"
     environment:
       - DOTNET_ENVIRONMENT=Production
-      - MongoDbSettings__ConnectionString=mongodb+srv://user:RGB3manas@cluster0.ccrfrrt.mongodb.net/?appName=Cluster0
-      - MongoDbSettings__DatabaseName=ZtpLab1DevDb
-      - MongoDbSettings__CollectionName=Notifications
+      - ApiUrl=http://api:8080
     depends_on:
       - api

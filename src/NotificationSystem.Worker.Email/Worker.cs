@@ -1,5 +1,3 @@
-using NotificationSystem.Domain.Enums;
-using NotificationSystem.Domain.Interfaces;
 using NotificationSystem.Shared.Models;
 using NotificationSystem.Shared.Services;
 
@@ -7,19 +5,22 @@ namespace NotificationSystem.Worker.Email;
 
 public class Worker : BackgroundService
 {
-    private readonly IServiceProvider _serviceProvider;
+    private readonly INotificationApiClient _apiClient;
     private readonly INotificationSender _sender;
+    private readonly IMetricsService _metrics;
     private readonly ILogger<Worker> _logger;
     private readonly TimeSpan _pollInterval = TimeSpan.FromSeconds(3);
     private const int MaxRetries = 3;
 
     public Worker(
-        IServiceProvider serviceProvider,
+        INotificationApiClient apiClient,
         INotificationSender sender,
+        IMetricsService metrics,
         ILogger<Worker> logger)
     {
-        _serviceProvider = serviceProvider;
+        _apiClient = apiClient;
         _sender = sender;
+        _metrics = metrics;
         _logger = logger;
     }
 
@@ -46,22 +47,26 @@ public class Worker : BackgroundService
 
     private async Task ProcessNotificationsAsync()
     {
-        using var scope = _serviceProvider.CreateScope();
-        var repository = scope.ServiceProvider.GetRequiredService<INotificationRepository>();
+        var notifications = await _apiClient.GetReadyToSendAsync("Email");
 
-        var notifications = await repository.GetReadyToSendAsync(DateTime.UtcNow);
-        var emailNotifications = notifications.Where(n => n.Channel == NotificationChannel.Email);
-
-        foreach (var notification in emailNotifications)
+        foreach (var notification in notifications)
         {
-            notification.Status = NotificationStatus.Sending;
-            await repository.UpdateAsync(notification);
+            // Sprawdź godziny ciszy (22:00-7:00 w strefie czasowej odbiorcy)
+            if (IsQuietHours(notification.TimeZone))
+            {
+                _logger.LogInformation("Email notification {Id} delayed - quiet hours in timezone {TimeZone}", 
+                    notification.Id, notification.TimeZone);
+                continue;
+            }
+
+            // Zmień status na Sending
+            await _apiClient.UpdateStatusAsync(notification.Id, "Sending");
 
             var message = new NotificationMessage
             {
                 Id = notification.Id,
                 Content = notification.Content,
-                Channel = notification.Channel.ToString(),
+                Channel = "Email",
                 Recipient = notification.Recipient,
                 TimeZone = notification.TimeZone,
                 RetryCount = notification.RetryCount
@@ -71,9 +76,13 @@ public class Worker : BackgroundService
 
             if (result.Success)
             {
-                notification.Status = NotificationStatus.Sent;
-                notification.SentAt = result.WasAlreadySent ? result.SentAt : DateTime.UtcNow;
-                notification.LastError = null;
+                var sentAt = result.WasAlreadySent ? result.SentAt : DateTime.UtcNow;
+                await _apiClient.UpdateStatusAsync(notification.Id, "Sent", sentAt);
+                
+                if (!result.WasAlreadySent)
+                {
+                    _metrics.IncrementSentCount();
+                }
                 
                 if (result.WasAlreadySent)
                 {
@@ -86,22 +95,38 @@ public class Worker : BackgroundService
             }
             else
             {
-                notification.RetryCount++;
-                notification.LastError = result.ErrorMessage;
+                var newRetryCount = notification.RetryCount + 1;
 
-                if (notification.RetryCount >= MaxRetries)
+                if (newRetryCount >= MaxRetries)
                 {
-                    notification.Status = NotificationStatus.Failed;
+                    await _apiClient.UpdateStatusAsync(notification.Id, "Failed", null, result.ErrorMessage, newRetryCount);
+                    _metrics.IncrementFailedCount();
                     _logger.LogWarning("Email notification {Id} failed after {MaxRetries} attempts", notification.Id, MaxRetries);
                 }
                 else
                 {
-                    notification.Status = NotificationStatus.Scheduled;
-                    _logger.LogInformation("Email notification {Id} will retry (attempt {Attempt})", notification.Id, notification.RetryCount + 1);
+                    await _apiClient.UpdateStatusAsync(notification.Id, "Scheduled", null, result.ErrorMessage, newRetryCount);
+                    _logger.LogInformation("Email notification {Id} will retry (attempt {Attempt})", notification.Id, newRetryCount + 1);
                 }
             }
+        }
+    }
 
-            await repository.UpdateAsync(notification);
+    private static bool IsQuietHours(string timeZoneId)
+    {
+        try
+        {
+            var timeZone = TimeZoneInfo.FindSystemTimeZoneById(timeZoneId);
+            var localTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, timeZone);
+            var hour = localTime.Hour;
+            
+            // Godziny ciszy: 22:00-7:00
+            return hour >= 22 || hour < 7;
+        }
+        catch
+        {
+            // Jeśli strefa czasowa jest nieznana, nie blokujemy wysyłki
+            return false;
         }
     }
 }

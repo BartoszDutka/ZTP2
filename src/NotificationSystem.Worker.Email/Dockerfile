@@ -5,7 +5,6 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 COPY ["src/NotificationSystem.Worker.Email/NotificationSystem.Worker.Email.csproj", "NotificationSystem.Worker.Email/"]
 COPY ["src/NotificationSystem.Domain/NotificationSystem.Domain.csproj", "NotificationSystem.Domain/"]
-COPY ["src/NotificationSystem.Infrastructure/NotificationSystem.Infrastructure.csproj", "NotificationSystem.Infrastructure/"]
 COPY ["src/NotificationSystem.Shared/NotificationSystem.Shared.csproj", "NotificationSystem.Shared/"]
 RUN dotnet restore "NotificationSystem.Worker.Email/NotificationSystem.Worker.Email.csproj"
 COPY src/ .

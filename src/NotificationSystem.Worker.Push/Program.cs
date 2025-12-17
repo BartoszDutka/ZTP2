@@ -1,24 +1,29 @@
-using MongoDB.Driver;
-using NotificationSystem.Domain.Interfaces;
-using NotificationSystem.Infrastructure.Repositories;
 using NotificationSystem.Shared.Services;
 using NotificationSystem.Worker.Push;
 
-var builder = Host.CreateApplicationBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
-// MongoDB configuration
-var connectionString = builder.Configuration.GetConnectionString("MongoDB") 
-    ?? "mongodb+srv://user:RGB3manas@cluster0.ccrfrrt.mongodb.net/?appName=Cluster0";
-var databaseName = builder.Configuration["MongoDB:DatabaseName"] ?? "ZtpLab1DevDb";
+// API URL configuration
+var apiUrl = builder.Configuration["ApiUrl"] ?? "http://api:8080";
 
-builder.Services.AddSingleton<IMongoClient>(new MongoClient(connectionString));
-builder.Services.AddScoped(sp => sp.GetRequiredService<IMongoClient>().GetDatabase(databaseName));
+// Register HTTP client for API communication
+builder.Services.AddHttpClient<INotificationApiClient, NotificationApiClient>(client =>
+{
+    client.BaseAddress = new Uri(apiUrl);
+});
 
-// Register repositories and services
-builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+// Register sender simulator
 builder.Services.AddSingleton<INotificationSender, NotificationSenderSimulator>();
+
+// Register metrics service
+builder.Services.AddSingleton<IMetricsService, MetricsService>();
 
 builder.Services.AddHostedService<Worker>();
 
-var host = builder.Build();
-host.Run();
+var app = builder.Build();
+
+// Metrics endpoint for Prometheus
+app.MapGet("/metrics", (IMetricsService metrics) => 
+    Results.Text(metrics.GetPrometheusMetrics("push_worker"), "text/plain"));
+
+app.Run();

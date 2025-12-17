@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-NotificationSystem.Worker.Email-5c0f669c-f8a2-4b97-8988-d35d4a664eda</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.11" />
+    <PackageReference Include="MongoDB.Driver" Version="3.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NotificationSystem.Domain\NotificationSystem.Domain.csproj" />
+    <ProjectReference Include="..\NotificationSystem.Infrastructure\NotificationSystem.Infrastructure.csproj" />
+    <ProjectReference Include="..\NotificationSystem.Shared\NotificationSystem.Shared.csproj" />
+  </ItemGroup>
+</Project>

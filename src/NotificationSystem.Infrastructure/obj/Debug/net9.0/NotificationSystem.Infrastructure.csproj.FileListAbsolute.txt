@@ -1,0 +1,15 @@
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\bin\Debug\net9.0\NotificationSystem.Infrastructure.deps.json
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\bin\Debug\net9.0\NotificationSystem.Infrastructure.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\bin\Debug\net9.0\NotificationSystem.Infrastructure.pdb
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\bin\Debug\net9.0\NotificationSystem.Domain.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\bin\Debug\net9.0\NotificationSystem.Domain.pdb
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.AssemblyInfo.cs
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\Notifica.8560B045.Up2Date
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\refint\NotificationSystem.Infrastructure.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.pdb
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\ref\NotificationSystem.Infrastructure.dll

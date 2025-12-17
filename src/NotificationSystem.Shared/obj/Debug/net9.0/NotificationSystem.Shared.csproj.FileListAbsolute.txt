@@ -1,0 +1,15 @@
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\bin\Debug\net9.0\NotificationSystem.Shared.deps.json
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\bin\Debug\net9.0\NotificationSystem.Shared.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\bin\Debug\net9.0\NotificationSystem.Shared.pdb
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\bin\Debug\net9.0\NotificationSystem.Domain.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\bin\Debug\net9.0\NotificationSystem.Domain.pdb
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.csproj.AssemblyReference.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.AssemblyInfoInputs.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.AssemblyInfo.cs
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.csproj.CoreCompileInputs.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\Notifica.5B30DF80.Up2Date
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\refint\NotificationSystem.Shared.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.pdb
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\ref\NotificationSystem.Shared.dll

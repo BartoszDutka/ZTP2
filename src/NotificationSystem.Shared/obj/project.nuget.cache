@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "FL6mfCHUoGU=",
+  "success": true,
+  "projectFilePath": "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Shared\\NotificationSystem.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.1\\microsoft.extensions.configuration.abstractions.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.1\\microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\10.0.1\\microsoft.extensions.diagnostics.abstractions.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\10.0.1\\microsoft.extensions.fileproviders.abstractions.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\10.0.1\\microsoft.extensions.hosting.abstractions.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.1\\microsoft.extensions.logging.abstractions.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.options\\10.0.1\\microsoft.extensions.options.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.1\\microsoft.extensions.primitives.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\mongodb.bson\\3.5.2\\mongodb.bson.3.5.2.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.1\\system.diagnostics.diagnosticsource.10.0.1.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\bin\Debug\net9.0\NotificationSystem.Domain.deps.json
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\bin\Debug\net9.0\NotificationSystem.Domain.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\bin\Debug\net9.0\NotificationSystem.Domain.pdb
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.AssemblyInfo.cs
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\refint\NotificationSystem.Domain.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.pdb
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\ref\NotificationSystem.Domain.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.csproj.AssemblyReference.cache

@@ -10,3 +10,4 @@ C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\D
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.pdb
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\ref\NotificationSystem.Domain.dll
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Domain\obj\Debug\net9.0\NotificationSystem.Domain.sourcelink.json

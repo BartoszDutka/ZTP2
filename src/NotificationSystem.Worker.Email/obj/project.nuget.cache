@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2Fcn6mzf4hI=",
+  "dgSpecHash": "uMvU2y4AKKI=",
   "success": true,
-  "projectFilePath": "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Worker.Email\\NotificationSystem.Worker.Email.csproj",
+  "projectFilePath": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Worker.Email\\NotificationSystem.Worker.Email.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.11\\microsoft.extensions.configuration.9.0.11.nupkg.sha512",

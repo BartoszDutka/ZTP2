@@ -59,3 +59,4 @@ C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Worker.Email
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Worker.Email\bin\Debug\net9.0\SharpCompress.dll
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Worker.Email\bin\Debug\net9.0\Snappier.dll
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Worker.Email\bin\Debug\net9.0\ZstdSharp.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Worker.Email\obj\Debug\net9.0\NotificationSystem.Worker.Email.sourcelink.json

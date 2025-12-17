@@ -13,3 +13,4 @@ C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\D
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\refint\NotificationSystem.Shared.dll
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.pdb
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\ref\NotificationSystem.Shared.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Shared\obj\Debug\net9.0\NotificationSystem.Shared.sourcelink.json

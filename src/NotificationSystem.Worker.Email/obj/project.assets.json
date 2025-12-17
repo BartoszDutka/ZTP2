@@ -2168,11 +2168,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Worker.Email\\NotificationSystem.Worker.Email.csproj",
+      "projectUniqueName": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Worker.Email\\NotificationSystem.Worker.Email.csproj",
       "projectName": "NotificationSystem.Worker.Email",
-      "projectPath": "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Worker.Email\\NotificationSystem.Worker.Email.csproj",
+      "projectPath": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Worker.Email\\NotificationSystem.Worker.Email.csproj",
       "packagesPath": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Worker.Email\\obj\\",
+      "outputPath": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Worker.Email\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2191,14 +2191,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Domain\\NotificationSystem.Domain.csproj": {
-              "projectPath": "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Domain\\NotificationSystem.Domain.csproj"
+            "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Domain\\NotificationSystem.Domain.csproj": {
+              "projectPath": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Domain\\NotificationSystem.Domain.csproj"
             },
             "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Infrastructure\\NotificationSystem.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Infrastructure\\NotificationSystem.Infrastructure.csproj"
             },
-            "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Shared\\NotificationSystem.Shared.csproj": {
-              "projectPath": "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Shared\\NotificationSystem.Shared.csproj"
+            "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Shared\\NotificationSystem.Shared.csproj": {
+              "projectPath": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Shared\\NotificationSystem.Shared.csproj"
             }
           }
         }

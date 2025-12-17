@@ -647,8 +647,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Domain\\NotificationSystem.Domain.csproj": {
-              "projectPath": "c:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Domain\\NotificationSystem.Domain.csproj"
+            "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Domain\\NotificationSystem.Domain.csproj": {
+              "projectPath": "C:\\Users\\bdutka.DESKTOP-ECBS2TP\\Desktop\\ZTP2\\src\\NotificationSystem.Domain\\NotificationSystem.Domain.csproj"
             }
           }
         }

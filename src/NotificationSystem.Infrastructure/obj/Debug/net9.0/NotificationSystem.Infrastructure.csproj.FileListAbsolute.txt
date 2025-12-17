@@ -13,3 +13,4 @@ C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructu
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\refint\NotificationSystem.Infrastructure.dll
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.pdb
 C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\ref\NotificationSystem.Infrastructure.dll
+C:\Users\bdutka.DESKTOP-ECBS2TP\Desktop\ZTP2\src\NotificationSystem.Infrastructure\obj\Debug\net9.0\NotificationSystem.Infrastructure.sourcelink.json

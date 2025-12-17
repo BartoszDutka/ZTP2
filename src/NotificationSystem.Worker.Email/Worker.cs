@@ -72,9 +72,17 @@ public class Worker : BackgroundService
             if (result.Success)
             {
                 notification.Status = NotificationStatus.Sent;
-                notification.SentAt = DateTime.UtcNow;
+                notification.SentAt = result.WasAlreadySent ? result.SentAt : DateTime.UtcNow;
                 notification.LastError = null;
-                _logger.LogInformation("Email notification {Id} sent successfully", notification.Id);
+                
+                if (result.WasAlreadySent)
+                {
+                    _logger.LogInformation("Email notification {Id} was already sent - skipping duplicate", notification.Id);
+                }
+                else
+                {
+                    _logger.LogInformation("Email notification {Id} sent successfully", notification.Id);
+                }
             }
             else
             {

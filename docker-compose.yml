@@ -1,0 +1,36 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: src/NotificationSystem.Api/Dockerfile
+    ports:
+      - "5173:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - MongoDbSettings__ConnectionString=mongodb+srv://user:RGB3manas@cluster0.ccrfrrt.mongodb.net/?appName=Cluster0
+      - MongoDbSettings__DatabaseName=ZtpLab1DevDb
+      - MongoDbSettings__CollectionName=Notifications
+
+  worker-email:
+    build:
+      context: .
+      dockerfile: src/NotificationSystem.Worker.Email/Dockerfile
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+      - MongoDbSettings__ConnectionString=mongodb+srv://user:RGB3manas@cluster0.ccrfrrt.mongodb.net/?appName=Cluster0
+      - MongoDbSettings__DatabaseName=ZtpLab1DevDb
+      - MongoDbSettings__CollectionName=Notifications
+    depends_on:
+      - api
+
+  worker-push:
+    build:
+      context: .
+      dockerfile: src/NotificationSystem.Worker.Push/Dockerfile
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+      - MongoDbSettings__ConnectionString=mongodb+srv://user:RGB3manas@cluster0.ccrfrrt.mongodb.net/?appName=Cluster0
+      - MongoDbSettings__DatabaseName=ZtpLab1DevDb
+      - MongoDbSettings__CollectionName=Notifications
+    depends_on:
+      - api
